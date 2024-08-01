@@ -20,6 +20,7 @@ function EmployeesData() {
     fetchData();
   }, []);
 
+
   const handleClick = async (id) => {
     // e.preventDefault();
     try {
@@ -49,7 +50,12 @@ function EmployeesData() {
                 <Link to={`/employee/${dta.id}`} className="delbtn">
                   Details
                 </Link>
-                <button className="upbtn">Update</button>
+                <Link
+                  to={`/update/${dta.id}`}
+                  className="upbtn"
+                >
+                  Update
+                </Link>
                 <button className="delbtn" onClick={() => handleClick(dta.id)}>
                   Delete
                 </button>
